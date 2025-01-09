@@ -3,7 +3,6 @@
   "version": "1.0.0",
   "description": "cheat sheet",
   "main": "index.js",
-  "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "lint": "eslint .",
@@ -22,5 +21,8 @@
     "eslint-plugin-react": "^7.37.2",
     "eslint-plugin-react-hooks": "^4.6.2",
     "globals": "^15.12.0"
+  },
+  "dependencies": {
+    "@datastructures-js/priority-queue": "5.4.0"
   }
 }
