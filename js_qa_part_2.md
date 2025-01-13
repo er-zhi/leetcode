@@ -41,36 +41,6 @@ const john = new Person('John');
 john.sayHello();  // Outputs: Hello, my name is John
 ```
 
-## 13. Event delegation and event propagation in JavaScript
-### Event Delegation
-```javascript
-document.getElementById('parent').addEventListener('click', function (event) {
-    if (event.target && event.target.matches('button.classname')) {
-        console.log('Button clicked');
-    }
-});
-```
-
-### Event Propagation
-```javascript
-// Event capturing
-document.getElementById('parent').addEventListener('click', () => console.log('Parent Capturing'), true);
-
-// Event bubbling
-document.getElementById('child').addEventListener('click', () => console.log('Child Bubbling'));
-```
-
-## 14. Clone an object
-```javascript
-function deepClone(obj) {
-    return JSON.parse(JSON.stringify(obj));
-}
-
-const original = { name: 'John', age: 30 };
-const clone = deepClone(original);
-console.log(clone);
-```
-
 ## 15. Debouncing and Throttling
 ### Debouncing
 ```javascript

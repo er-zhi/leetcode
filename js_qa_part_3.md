@@ -19,8 +19,27 @@ setInterval(() => console.log('Hello'), 1000);
 
 ## 28. Describe how to implement deep cloning of an object.
 ```javascript
+// #1
 function deepClone(obj) {
     return JSON.parse(JSON.stringify(obj));
+}
+// #2
+const modernDeepClone = (original) => structuredClone(original);
+// #3
+function deepCopyRecursive(obj) {
+  if (typeof obj !== 'object' || obj === null) {
+    return obj; // Return primitives and null as is
+  }
+
+  const copy = Array.isArray(obj) ? [] : {};
+
+  for (const key in obj) {
+    if (Object.hasOwnProperty.call(obj, key)) {
+      copy[key] = deepCopy(obj[key]); // Recursive call
+    }
+  }
+
+  return copy;
 }
 ```
 
@@ -65,13 +84,6 @@ function outer() {
 const counter = outer();
 counter();  // Outputs: 1
 counter();  // Outputs: 2
-```
-
-## 32. How do you prevent default behavior of an event?
-```javascript
-element.addEventListener('click', function(event) {
-    event.preventDefault();
-});
 ```
 
 ## 33. What are arrow functions, and how do they differ from regular functions?

@@ -7,11 +7,7 @@ let weakRef = new WeakRef(obj);
 ```
 
 ## 42. How do you optimize performance in large-scale applications?
-- **Use of lazy loading**: Load resources only when required.
-- **Efficient DOM updates**: Minimize reflows and repaints.
 - **Memoization**: Cache results of expensive function calls.
-- **Code splitting**: Break your code into smaller chunks.
-- **Use of web workers**: Offload heavy computation to background threads.
 
 ## 43. What are some common security issues in JavaScript applications?
 - **Cross-Site Scripting (XSS)**: Injecting malicious scripts into web pages.
